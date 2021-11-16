@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Assets.xcassets">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Viewcontrollers">
+      <FileRef
+         location = "group:detailsViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:SignUpViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:ViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:LoginViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:HomeViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:LiveStreamViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:StandingViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:DrawViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:ChooseGameViewController.swift">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "container:">
+   </FileRef>
+</Workspace>
