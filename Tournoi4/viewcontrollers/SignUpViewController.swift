@@ -4,15 +4,16 @@
 //
 //  Created by Apple Esprit on 9/11/2021.
 //
-
+import Alamofire
 import UIKit
-
+import SwiftyJSON
 class SignUpViewController: UIViewController {
     
     
-    @IBOutlet weak var firstNameTextField: UITextField!
+
     
-    @IBOutlet weak var lastNameTextField: UITextField!
+    
+    @IBOutlet weak var usernameTextField: UITextField!
     
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -25,7 +26,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     
-    @IBOutlet weak var errorLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +37,11 @@ class SignUpViewController: UIViewController {
             
             //Controlelr l'information est-il complet
             
-            if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-                lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            if
+                usernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
                 emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
                 passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+                
             
             {
                
@@ -66,11 +68,19 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpTapped(_ sender: Any) {
         
-        let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+       
+        let username = usernameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        inscription().inscription(user: User(username: username, email: email, password: password)) { sucess in
+            if sucess{
+                print("saret")
+            } else {
+                print("masaretch")
+            }
+        }
     }
+   
     
-
 }
